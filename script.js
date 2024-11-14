@@ -6,6 +6,7 @@ let resultado;
 let historial = [];
 
 
+//Funcion principal de la calculadora, unicamente se ejecuta esta al iniciar el programa, dentro de esta se ejecutan todas las demas
 function calculadora() {
 
     //Declaro una variable para controlar si se sigue haciendo operacion o si se para la ejecucion del programa
@@ -19,7 +20,7 @@ function calculadora() {
         } while (!(tipo == "sum") && !(tipo == "res") && !(tipo == "mult") && !(tipo == "div") && !(tipo == "raiz") && !(tipo == "parar") && !(tipo == "historial"));
 
 
-        //Si se va a realizar una raiz cuadrada solo pido un numero
+        //Si se va a realizar una raiz cuadrada solo pido un numero y ejecuto la funcion operacion()
         if (tipo == "raiz") {
         
             do {
@@ -39,7 +40,7 @@ function calculadora() {
 
             mostrarHistorial();
 
-        //Si se introduce cualquier otra operacion pido dos numeros
+        //Si se introduce cualquier otra operacion pido dos numeros, valido el input con la funcion validarInput() y segun si es valida o no, ejecuto la funcion operacion() o muestro una alerta con un aviso
         } else {
 
             do {
@@ -63,6 +64,7 @@ function calculadora() {
     } while (detener);
 }
 
+//La funcion operacion() llama a la funcion correspondiente segun el tipo de operacion introducida: sumar(), restar()...
 function operacion(num1, num2, tipo) {
 
     switch (tipo) {
@@ -96,7 +98,7 @@ function operacion(num1, num2, tipo) {
 
 
 
-
+//Las funciones del tipo de operacion, usan como argumentos los numeros introducidos y guardan en "resultado" el string de la operacion, lo guardan en el historial y lo muestran por consola 
 function sumar(num1, num2) {
     resultado = `${num1} + ${num2} = ${num1 + num2}`;
     guardarEnHistorial(resultado);
@@ -129,11 +131,12 @@ function raiz(num1) {
 
 
 
-
+//Esta funcion es llamada dentro de cada tipo de operacion
 function guardarEnHistorial(resultado) {
     historial.push(resultado);
 }
 
+//Esta funcion es llamada cuando el usuario introduce "historial" en el prompt, es un bucle que muestra todos los elementos del array "historial"
 function mostrarHistorial() {
     
     for (const element of historial) {
@@ -142,7 +145,7 @@ function mostrarHistorial() {
 }
 
 
-
+//Esta funcion devuelve false cuando se intenta dividir un numero entre 0 y true de lo contrario. Es llamada despues de que se hayan pedido los dos numeros, para verificar la operacion
 function validarInput(tipo, num2) {
     if (tipo == "div" && num2 == 0) {
         return false;
@@ -151,4 +154,6 @@ function validarInput(tipo, num2) {
     }
 }
 
+
+//Ejecuto la funcion principal
 calculadora();
