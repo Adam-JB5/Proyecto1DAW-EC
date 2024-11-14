@@ -1,11 +1,11 @@
-Calculadora en JavaScript
+#Calculadora en JavaScript
 
 Este proyecto es una calculadora interactiva en JavaScript que permite realizar operaciones aritméticas básicas, incluyendo suma, resta, multiplicación, división y cálculo de raíz cuadrada. También tiene una función de historial para registrar y mostrar las operaciones realizadas durante la ejecución.
 
 
-Características
+##Características
 
-Operaciones soportadas:
+###Operaciones soportadas:
   - Suma (sum)
   - Resta (res)
   - Multiplicación (mult)
@@ -18,10 +18,10 @@ Operaciones soportadas:
   Historial de operaciones: Guarda todas las operaciones realizadas durante la ejecución y permite al usuario visualizar el historial.
 
   
-Requisitos
+##Requisitos
   Este programa está escrito en JavaScript y utiliza prompt() para recibir entradas, por lo que se puede ejecutar en un navegador que soporte JavaScript. No requiere dependencias adicionales.
 
-Uso
+##Uso
 
   Ejecutar el programa: Al iniciar, la función principal calculadora() se ejecuta automáticamente.
   
@@ -38,7 +38,7 @@ Uso
   Ver resultados: Los resultados se muestran en la consola del navegador. Si se selecciona historial, se muestra el historial de todas las operaciones realizadas.
 
   
-Funciones principales
+##Funciones principales
   - calculadora(): Función principal que controla el flujo de la aplicación.
   - operacion(num1, num2, tipo): Llama a la función correspondiente para realizar la operación seleccionada.
   - sumar(num1, num2), restar(num1, num2), multiplicar(num1, num2), dividir(num1, num2), raiz(num1): Realizan la operación aritmética especificada.
@@ -47,7 +47,7 @@ Funciones principales
   - validarInput(tipo, num2): Verifica si una división es válida (evita divisiones entre cero).
 
 
-Flujo del programa
+##Flujo del programa
 
   1. Se inicia la ejecución de la función calculadora(), que solicita al usuario una operación.
   
