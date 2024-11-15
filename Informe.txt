@@ -1,0 +1,4 @@
+Decisiones de diseño y complicaciones:
+- He decidido crear una función adicional para cada tipo de operación, de esta forma el programa es más modular y mucho más fácil de mantener
+- Una raiz cuadrada solo se compone de un número por lo que al llamar a la función operacion(), le meto como argumentos el primer y único número introducido por el usuario, como segundo número introduzco 0 y como último argumento el string "raiz" por supuesto
+- Ha sido complicado seguir el flujo del programa de forma eficiente para que se sigan pidiendo operaciones y números debido a la cantidad de funciones implementadas y "caminos" que puede tomar el usuario a la hora de ejecutar el programa
